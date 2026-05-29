@@ -7,60 +7,23 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
 / {
     combos {
         compatible = "zmk,combos";
 
-        prtsc {
-            bindings = <&kp PRINTSCREEN>;
-            key-positions = <10 11>;
+        esc {
+            bindings = <&kp ESCAPE>;
+            key-positions = <2 3>;
+            layers = <0>;
         };
 
-        RightClick {
-            bindings = <&mkp RCLK>;
-            key-positions = <30 44>;
-        };
-
-        MiddleClick {
-            bindings = <&mkp MCLK>;
-            key-positions = <29 43>;
-        };
-
-        RightClick2 {
-            bindings = <&mkp RCLK>;
-            key-positions = <31 45>;
-        };
-
-        MiddleClick2 {
-            bindings = <&mkp MCLK>;
-            key-positions = <32 46>;
-        };
-
-        zen-han {
-            bindings = <&kp GRAVE>;
-            key-positions = <0 1>;
-        };
-
-        paste {
-            bindings = <&kp LC(V)>;
-            key-positions = <42 28>;
-        };
-
-        copy {
-            bindings = <&kp LC(C)>;
-            key-positions = <41 27>;
-        };
-
-        cut {
-            bindings = <&kp LC(X)>;
-            key-positions = <40 26>;
-        };
-
-        prev_click {
-            bindings = <&mkp MB4>;
-            key-positions = <29 30>;
+        del {
+            bindings = <&kp DELETE>;
+            key-positions = <16 15>;
+            layers = <0>;
         };
     };
 
@@ -69,7 +32,7 @@
 
         default_layer {
             bindings = <
-&none                 &kp Q      &kp W            &kp E                  &kp R                      &kp T                                                              &kp Y        &kp U             &kp I      &kp O     &kp P      &kp LANG_ZENKAKUHANKAKU
+&out OUT_TOG          &kp Q      &kp W            &kp E                  &kp R                      &kp T                                                              &kp Y        &kp U             &kp I      &kp O     &kp P      &kp LANG_ZENKAKUHANKAKU
 &none                 &kp A      &kp S            &kp D                  &lt 2 F                    &kp G                                                              &kp H        &kp J             &kp K      &kp L     &kp MINUS  &none
 &mt LEFT_CONTROL TAB  &kp Z      &kp X            &kp C                  &kp V                      &kp B                 &mkp LCLK                         &mkp RCLK  &kp N        &kp M             &kp COMMA  &kp DOT   &kp SLASH  &kp RSHIFT
 &none                 &kp LC(Z)  &kp PRINTSCREEN  &mt LEFT_WIN LEFT_WIN  &mt LEFT_ALT INT_MUHENKAN  &mt LEFT_SHIFT SPACE  &mt LA(LEFT_WIN) LA(PRINTSCREEN)  &mkp LCLK  &lt 1 ENTER  &lt 2 INT_HENKAN  &none      &kp LEFT  &kp DOWN   &none
