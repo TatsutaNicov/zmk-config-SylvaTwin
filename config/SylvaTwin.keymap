@@ -25,6 +25,24 @@
             key-positions = <16 15>;
             layers = <0>;
         };
+
+        home {
+            bindings = <&mt RCTRL HOME>;
+            key-positions = <19 20>;
+            layers = <1>;
+        };
+
+        end {
+            bindings = <&mt RIGHT_ALT END>;
+            key-positions = <20 21>;
+            layers = <1>;
+        };
+
+        enter {
+            bindings = <&kp ENTER>;
+            key-positions = <4 2 3>;
+            layers = <0>;
+        };
     };
 
     keymap {
@@ -32,10 +50,10 @@
 
         default_layer {
             bindings = <
-&out OUT_TOG          &kp Q      &kp W            &kp E                  &kp R                      &kp T                                                              &kp Y        &kp U             &kp I      &kp O     &kp P      &kp LANG_ZENKAKUHANKAKU
-&none                 &kp A      &kp S            &kp D                  &lt 2 F                    &kp G                                                              &kp H        &kp J             &kp K      &kp L     &kp MINUS  &none
-&mt LEFT_CONTROL TAB  &kp Z      &kp X            &kp C                  &kp V                      &kp B                 &mkp LCLK                         &mkp RCLK  &kp N        &kp M             &kp COMMA  &kp DOT   &kp SLASH  &kp RSHIFT
-&none                 &kp LC(Z)  &kp PRINTSCREEN  &mt LEFT_WIN LEFT_WIN  &mt LEFT_ALT INT_MUHENKAN  &mt LEFT_SHIFT SPACE  &mt LA(LEFT_WIN) LA(PRINTSCREEN)  &mkp LCLK  &lt 1 ENTER  &lt 2 INT_HENKAN  &lt 3 F2   &kp LEFT  &kp DOWN   &none
+&out OUT_TOG          &kp Q      &kp W            &kp E                  &kp R                      &kp T                                     &kp Y        &kp U             &kp I      &kp O     &kp P      &kp LANG_ZENKAKUHANKAKU
+&mt LCTRL TAB         &kp A      &kp S            &kp D                  &lt 2 F                    &kp G                                     &kp H        &kp J             &kp K      &kp L     &kp MINUS  &none
+&mt LEFT_CONTROL TAB  &kp Z      &kp X            &kp C                  &kp V                      &kp B                 &mkp MB2  &mkp MB2  &kp N        &kp M             &kp COMMA  &kp DOT   &kp SLASH  &kp RSHIFT
+&lt 1 PRINTSCREEN     &kp LC(Z)  &kp PRINTSCREEN  &mt LEFT_WIN LEFT_WIN  &mt LEFT_ALT INT_MUHENKAN  &mt LEFT_SHIFT SPACE  &mkp MB1  &mkp MB3  &lt 1 ENTER  &lt 2 INT_HENKAN  &lt 3 F2   &kp LEFT  &kp DOWN   &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
