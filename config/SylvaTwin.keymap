@@ -50,12 +50,6 @@
             layers = <0>;
         };
 
-        q {
-            bindings = <&mt RC(RIGHT_WIN) P>;
-            key-positions = <8 9>;
-            layers = <0>;
-        };
-
         r-ctrl {
             bindings = <&mt RCTRL LS(LA(END))>;
             key-positions = <20 21>;
