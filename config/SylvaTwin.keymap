@@ -51,7 +51,7 @@
         };
 
         q {
-            bindings = <&mt RC(RIGHT_WIN) Q>;
+            bindings = <&mt RC(RIGHT_WIN) P>;
             key-positions = <8 9>;
             layers = <0>;
         };
