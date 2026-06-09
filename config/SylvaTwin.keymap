@@ -49,6 +49,18 @@
             key-positions = <14 16>;
             layers = <0>;
         };
+
+        L2_RALT {
+            bindings = <&mt RIGHT_ALT HOME>;
+            key-positions = <19 20>;
+            layers = <2>;
+        };
+
+        L2_CTRL {
+            bindings = <&mt RCTRL END>;
+            key-positions = <20 21>;
+            layers = <2>;
+        };
     };
 
     keymap {
@@ -56,7 +68,7 @@
 
         default_layer {
             bindings = <
-&none                 &kp Q      &kp W            &kp E                  &kp R                      &kp T                                     &kp Y        &kp U             &kp I      &kp O     &kp P      &none
+&none                 &kp Q      &kp W            &kp E                  &kp R                      &kp T                                     &lt 2 Y      &kp U             &kp I      &kp O     &kp P      &none
 &none                 &kp A      &kp S            &kp D                  &lt 2 F                    &kp G                                     &kp H        &kp J             &kp K      &kp L     &kp MINUS  &none
 &mt LEFT_CONTROL TAB  &kp Z      &kp X            &kp C                  &kp V                      &kp B                 &mkp MB2  &mkp MB2  &kp N        &kp M             &kp COMMA  &kp DOT   &kp SLASH  &kp RSHIFT
 &none                 &kp LC(Z)  &kp PRINTSCREEN  &mt LEFT_WIN LEFT_WIN  &mt LEFT_ALT INT_MUHENKAN  &mt LEFT_SHIFT SPACE  &mkp MB1  &mkp MB1  &lt 1 ENTER  &lt 2 INT_HENKAN  &lt 3 F2   &kp LEFT  &kp DOWN   &none
@@ -67,10 +79,10 @@
 
         layer_1 {
             bindings = <
-&none   &none   &kp N7        &kp N8  &kp N9  &none                   &kp CARET             &kp PAGE_UP       &kp UP_ARROW       &kp PAGE_DOWN  &kp EQUAL      &kp LANG_ZENKAKUHANKAKU
-&none   &none   &kp NUMBER_4  &kp N5  &kp N6  &none                   &kp BACKSPACE         &kp LEFT_ARROW    &kp DOWN_ARROW     &kp RIGHT      &kp SEMICOLON  &none
-&trans  &kp N0  &kp N1        &kp N2  &kp N3  &none   &trans  &trans  &kp NON_US_BACKSLASH  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp AT_SIGN    &kp BACKSLASH  &kp COLON
-&trans  &trans  &trans        &trans  &trans  &trans  &trans  &trans  &trans                &trans            &trans             &trans         &trans         &trans
+&none   &none   &kp N7        &kp N8  &kp N9  &none                   &kp KP_PLUS           &kp PAGE_UP     &kp UP_ARROW    &kp PAGE_DOWN  &kp LANG_ZENKAKUHANKAKU  &none
+&none   &none   &kp NUMBER_4  &kp N5  &kp N6  &none                   &kp BACKSPACE         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT      &kp SEMICOLON            &none
+&trans  &kp N0  &kp N1        &kp N2  &kp N3  &none   &trans  &trans  &kp NON_US_BACKSLASH  &kp RBKT        &kp BACKSLASH   &kp LBKT       &kp NON_US_BACKSLASH     &kp APOS
+&trans  &trans  &trans        &trans  &trans  &trans  &trans  &trans  &trans                &trans          &trans          &trans         &trans                   &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -93,6 +105,15 @@
 &none  &none          &out OUT_TOG   &bt BT_PRV     &bt BT_NXT     &none                                 &none  &none  &none  &none  &none  &none
 &none  &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &bt BT_CLR      &none  &none  &none  &none  &none  &none  &none
 &none  &none          &none          &none          &none          &none          &bt BT_CLR_ALL  &none  &none  &none  &none  &none  &none  &none
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp MB3  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
