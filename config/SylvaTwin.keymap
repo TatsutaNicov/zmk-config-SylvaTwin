@@ -61,6 +61,17 @@
             key-positions = <20 21>;
             layers = <2>;
         };
+
+        p {
+            bindings = <&kp P>;
+            key-positions = <9 8>;
+            layers = <0>;
+        };
+
+        q {
+            bindings = <&kp Q>;
+            key-positions = <4 3>;
+        };
     };
 
     macros {
@@ -79,22 +90,13 @@
         };
     };
 
-    behaviors {
-        dance_FF: dance_FF {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DANCE_FF";
-            #binding-cells = <0>;
-            bindings = <&lt 2 F>, <&mac_input_fa>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
             bindings = <
 &none                 &kp Q      &kp W            &kp E                  &kp R                      &kp T                                     &lt 2 Y      &kp U             &kp I        &kp O     &kp P      &none
-&none                 &kp A      &kp S            &kp D                  &dance_FF                  &kp G                                     &kp H        &kp J             &kp K        &kp L     &kp MINUS  &none
+&none                 &kp A      &kp S            &kp D                  &lt 2 F                    &kp G                                     &kp H        &lt 2 J           &kp K        &kp L     &kp MINUS  &none
 &mt LEFT_CONTROL TAB  &kp Z      &kp X            &kp C                  &kp V                      &kp B                 &mkp MB2  &mkp MB2  &kp N        &kp M             &kp COMMA    &kp DOT   &kp SLASH  &kp RSHIFT
 &none                 &kp LC(Z)  &kp PRINTSCREEN  &mt LEFT_WIN LEFT_WIN  &mt LEFT_ALT INT_MUHENKAN  &mt LEFT_SHIFT SPACE  &mkp MB1  &mkp MB1  &lt 1 ENTER  &lt 2 INT_HENKAN  &lt 4 K_APP  &kp LEFT  &kp DOWN   &none
             >;
