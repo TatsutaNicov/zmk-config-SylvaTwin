@@ -72,6 +72,12 @@
             bindings = <&kp Q>;
             key-positions = <4 3>;
         };
+
+        alt_ctrl {
+            bindings = <&mt RA(RCTRL) LS(INTERNATIONAL_1)>;
+            key-positions = <20 21 19>;
+            layers = <2>;
+        };
     };
 
     macros {
@@ -82,11 +88,25 @@
             label = "KP_FA";
         };
 
-        mac_sh: mac_sh {
+        mac_sya: mac_sh {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp S &kp A>;
+            bindings = <&kp S &kp Y &kp A>;
             label = "MAC_SH";
+        };
+
+        mac_syu: mac_syu {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp S &kp Y &kp U>;
+            label = "MAC_SYU";
+        };
+
+        mac_syo: mac_syo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp S &kp Y &kp O>;
+            label = "MAC_SYO";
         };
     };
 
@@ -97,7 +117,7 @@
             bindings = <
 &none                 &kp Q      &kp W            &kp E                  &kp R                      &kp T                                     &lt 2 Y      &kp U             &kp I        &kp O     &kp P      &none
 &none                 &kp A      &kp S            &kp D                  &lt 2 F                    &kp G                                     &kp H        &lt 2 J           &kp K        &kp L     &kp MINUS  &none
-&mt LEFT_CONTROL TAB  &kp Z      &kp X            &kp C                  &kp V                      &kp B                 &mkp MB2  &mkp MB2  &kp N        &kp M             &kp COMMA    &kp DOT   &kp SLASH  &kp RSHIFT
+&mt LEFT_CONTROL TAB  &kp Z      &kp X            &kp C                  &kp V                      &kp B                 &mkp MB2  &mkp MB2  &kp N        &kp M             &kp COMMA    &kp DOT   &kp SLASH  &mt LG(RIGHT_SHIFT) P
 &none                 &kp LC(Z)  &kp PRINTSCREEN  &mt LEFT_WIN LEFT_WIN  &mt LEFT_ALT INT_MUHENKAN  &mt LEFT_SHIFT SPACE  &mkp MB1  &mkp MB1  &lt 1 ENTER  &lt 2 INT_HENKAN  &lt 4 K_APP  &kp LEFT  &kp DOWN   &none
             >;
 
@@ -117,10 +137,10 @@
 
         extra_layer {
             bindings = <
-&none   &kp F13  &kp F7  &kp F8  &kp F9  &kp F10                  &none   &none                &kp LC(PAGE_UP)      &none                &none                &none
-&none   &mac_sh  &kp F4  &kp F5  &kp F6  &kp F11                  &none   &kp LC(LS(TAB))      &kp LC(PAGE_DOWN)    &kp LC(TAB)          &none                &none
-&trans  &kp F15  &kp F1  &kp F2  &kp F3  &kp F12  &trans  &trans  &none   &kp INTERNATIONAL_6  &kp INTERNATIONAL_7  &kp INTERNATIONAL_8  &kp INTERNATIONAL_9  &none
-&trans  &trans   &trans  &trans  &trans  &trans   &trans  &trans  &trans  &trans               &trans               &trans               &trans               &trans
+&none   &kp F13   &kp F7  &kp F8  &kp F9  &kp F10                  &none   &mac_syu             &kp LC(PAGE_UP)      &mac_syo             &none                &none
+&none   &mac_sya  &kp F4  &kp F5  &kp F6  &kp F11                  &none   &kp LC(LS(TAB))      &kp LC(PAGE_DOWN)    &kp LC(TAB)          &none                &none
+&trans  &kp F15   &kp F1  &kp F2  &kp F3  &kp F12  &trans  &trans  &none   &kp INTERNATIONAL_6  &kp INTERNATIONAL_7  &kp INTERNATIONAL_8  &kp INTERNATIONAL_9  &none
+&trans  &trans    &trans  &trans  &trans  &trans   &trans  &trans  &trans  &trans               &trans               &trans               &trans               &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
