@@ -78,6 +78,12 @@
             key-positions = <20 21 19>;
             layers = <2>;
         };
+
+        df_alt+cntrl {
+            bindings = <&mt RA(RCTRL) LS(INTERNATIONAL_1)>;
+            key-positions = <20 21 19>;
+            layers = <0>;
+        };
     };
 
     macros {
@@ -115,10 +121,10 @@
 
         default_layer {
             bindings = <
-&none                 &kp Q      &kp W            &kp E                  &kp R                      &kp T                                     &lt 2 Y      &kp U             &kp I        &kp O     &kp P      &none
-&none                 &kp A      &kp S            &kp D                  &lt 2 F                    &kp G                                     &kp H        &lt 2 J           &kp K        &kp L     &kp MINUS  &none
-&mt LEFT_CONTROL TAB  &kp Z      &kp X            &kp C                  &kp V                      &kp B                 &mkp MB2  &mkp MB2  &kp N        &kp M             &kp COMMA    &kp DOT   &kp SLASH  &mt LG(RIGHT_SHIFT) P
-&none                 &kp LC(Z)  &kp PRINTSCREEN  &mt LEFT_WIN LEFT_WIN  &mt LEFT_ALT INT_MUHENKAN  &mt LEFT_SHIFT SPACE  &mkp MB1  &mkp MB1  &lt 1 ENTER  &lt 2 INT_HENKAN  &lt 4 K_APP  &kp LEFT  &kp DOWN   &none
+&none                             &kp Q      &kp W            &kp E                  &kp R                      &kp T                                     &lt 2 Y      &kp U             &kp I        &kp O     &kp P      &none
+&none                             &kp A      &kp S            &kp D                  &lt 2 F                    &kp G                                     &kp H        &lt 2 J           &kp K        &kp L     &kp MINUS  &none
+&mt LEFT_CONTROL TAB              &kp Z      &kp X            &kp C                  &kp V                      &kp B                 &mkp MB2  &mkp MB2  &kp N        &kp M             &kp COMMA    &kp DOT   &kp SLASH  &mt LG(RIGHT_SHIFT) SPACE
+&mt LG(LEFT_ALT) RA(PRINTSCREEN)  &kp LC(Z)  &kp PRINTSCREEN  &mt LEFT_WIN LEFT_WIN  &mt LEFT_ALT INT_MUHENKAN  &mt LEFT_SHIFT SPACE  &mkp MB1  &mkp MB1  &lt 1 ENTER  &lt 2 INT_HENKAN  &lt 4 K_APP  &kp LEFT  &kp DOWN   &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
